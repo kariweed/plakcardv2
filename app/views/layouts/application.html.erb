@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prawntester</title>
+  <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Homemade+Apple' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+          </button>
+
+	      <%= link_to "The Perfect Touch", root_path, class: "navbar-brand" %>
+
+
+	      <br/> 
+	      <br/>
+	      <div class="col-sm-8">
+		      <div class="well well-sm">
+				Breathe. Planning a wedding is no small endeavor. It's not cheap, and it's not easy. We don't have the formula for the perfect wedding, and we're not going to boast that we can come close to helping you get there. But the one thing we do know: key to failure is trying to please everyone. So stop chasing others. Be you.<br><br>
+
+				Here you'll find some free placards we think you might love. Upload your guest list and select a placard design. Print & cut is all it takes. All we ask in return is that you share this source with others as they plan their big day. <br>
+				</div>
+			</div>
+
+			
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    	
+	      <ul class="nav navbar-nav">
+	        <li><a href="#page1">Step 1: Import Guest List</a></li>
+	        <li><a href="#page2">Step 2: Select Wedding Placard</a></li>
+	        <li><a href="#page3">Step 3: Print</a></li>
+	    </ul>
+    </div>
+
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+
+	  </div><!-- /.container-fluid -->
+	  
+	  
+	  
+	  
+	
+	</nav>
+
+
+		
+
+<div class="container"> 
+	<%= yield %>
+</div>
+
+<footer class="footer">
+	Courtesy of Joyce Yu & Kari Weed.
+        </footer>
+
+</body>
+</html>

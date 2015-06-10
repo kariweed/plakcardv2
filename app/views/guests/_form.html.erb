@@ -1,0 +1,21 @@
+
+
+<%= form_for @guest, remote: true do |f|   %>
+  <div class="form-group">
+  <%= f.text_field  :name, placeholder: "Guest Name", class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.text_field :table_num, placeholder: "Table Number", class: "form-control" %>
+  </div>
+  <div class="form-group">
+  <%= f.button :submit, class: "btn btn-primary" %>
+</div>
+<% end %>
+
+<%= form_tag import_guests_path, multipart: true do %> 
+<%= file_field_tag :file %> 
+<br>
+<div class="form-group">
+  <%= submit_tag "import", class: "btn btn-primary" %> 
+</div>
+<% end %> 

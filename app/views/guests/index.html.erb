@@ -1,0 +1,52 @@
+
+<div id="page1"> 
+
+
+  <div class="row">
+  <div class="col-md-3">
+  <%= link_to new_guest_path, remote: true do %>
+    <button class="btn btn-default"><span class="glyphicon glyphicon-plus"></span> Add Guest </button>
+  <% end %>
+
+   <div id="guest-form" style="display:none;"></div> 
+  </div>
+
+  <div class="col-md-8"> 
+    <h2>Guests</h2>
+    <div id="guests">
+      <div class="row">
+        <table class="table">
+          <thead> 
+            <tr> 
+              <th>Name</th> 
+              <th>Table</th> 
+              <th></th>
+              <th></th>
+            </tr>
+          </thead> 
+        <%= render @guests %>
+        </table>
+      </div>
+    </div>
+  </div>  
+
+</div> 
+
+
+<div id="page2"> 
+  <div class="container-fluid"> 
+    <h2>Select Wedding Placard</h2>
+
+    <%= link_to image_tag("pla1.png", :width =>150), :action => "option", :controller => "guests", :choice => 1, :format => "pdf" %> 
+
+    <%= link_to image_tag("pla2.png", :width =>150), :action => "option", :controller => "guests", :choice => 2, :format => "pdf" %> 
+
+    <%= link_to image_tag("pla3.png", :width =>150), :action => "option", :controller => "guests", :choice => 3, :format => "pdf" %> 
+
+    <%= link_to image_tag("pla4.png", :width =>150), :action => "option", :controller => "guests", :choice => 4, :format => "pdf" %> 
+
+  </div> 
+</div>
+
+<br>
+<br>
